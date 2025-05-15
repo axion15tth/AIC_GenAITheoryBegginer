@@ -39,9 +39,6 @@ SECRET_FILE = DATA_DIR / "secret_word.json"
 EMBED_MODEL = "text-embedding-3-small"  # 1536 次元
 
 OPENAI_KEY = "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"
-if not OPENAI_KEY:
-    st.error("OPENAI_API_KEY が設定されていません。環境変数または Streamlit の Secret で指定してください。")
-    st.stop()
 
 # ---- OpenAI SDK version check ----
 # v1.x では `openai.OpenAI`, v0.x では `openai.api_key` スタイル。
