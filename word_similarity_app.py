@@ -38,15 +38,15 @@ RESPONSES_CSV = DATA_DIR / "responses.csv"
 SECRET_FILE = DATA_DIR / "secret_word.json"
 EMBED_MODEL = "text-embedding-3-small"  # 1536 次元
 
-OPENAI_KEY = "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"
+OPENAI_KEY = "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"
 
 # ---- OpenAI SDK version check ----
 # v1.x では `openai.OpenAI`, v0.x では `openai.api_key` スタイル。
 try:
-    client = openai.OpenAI(api_key="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")  # type: ignore[attr-defined]
+    client = openai.OpenAI(api_key="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")  # type: ignore[attr-defined]
     _use_client = True  # 新 SDK
 except AttributeError:
-    openai.api_key = "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"  # 旧 SDK
+    openai.api_key = "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"  # 旧 SDK
     _use_client = False
 
 st.set_page_config(page_title="単語類似度チャレンジ", page_icon="🧠", initial_sidebar_state="collapsed")
